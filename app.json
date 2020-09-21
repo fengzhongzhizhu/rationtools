@@ -9,6 +9,6 @@
     "backgroundTextStyle": "dark",
     "backgroundColor": "#f7f7f7",
     "navigationBarTitleText": "mortgage"
-  }
-   
+  },
+  "sitemapLocation": "sitemap.json"
 }

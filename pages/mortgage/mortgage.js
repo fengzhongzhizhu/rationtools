@@ -29,6 +29,7 @@ Page({
     rateIndex1: 6,
     percentArr: [7, 6, 5, 4, 3, 2],
     percentIndex: 0,
+    percent:7,
     years: [30, 25, 20, 15, 10],
     yearIndex: 20,
 
@@ -189,6 +190,11 @@ Page({
       commercialTotal: e.detail.value
     });
   },
+  percentChange(e) {
+    this.setData({
+      percent: e.detail.value
+    });
+  },
   gjjTotalChange(e) {
     this.setData({
       gjjTotal: e.detail.value
@@ -200,8 +206,8 @@ Page({
     var interestRatePerMou0;
     var interestRatePerMou1;
     var totalMouths;
-    commercialTotal = this.data.loanIndex == 1 || this.data.activeIndex == 2 ? this.data.commercialTotal : this.data.commercialTotal * this.data.percentArr[this.data.percentIndex] / 10;
-    gjjTotal = this.data.loanIndex == 1 || this.data.activeIndex == 2 ? this.data.gjjTotal : this.data.gjjTotal * this.data.percentArr[this.data.percentIndex] / 10;
+    commercialTotal = this.data.loanIndex == 1 || this.data.activeIndex == 2 ? this.data.commercialTotal : this.data.commercialTotal * this.data.percent / 10;
+    gjjTotal = this.data.loanIndex == 1 || this.data.activeIndex == 2 ? this.data.gjjTotal : this.data.gjjTotal * this.data.percent / 10;
     interestRatePerMou0 = this.data.rates[0][this.data.rateIndex0];
     interestRatePerMou1 = this.data.rates[1][this.data.rateIndex1];
     totalMouths = this.data.yearIndex * 12;

@@ -91,17 +91,18 @@
                   </picker>
                 </view>
               </view>
-
-              <view class="weui-cell weui-cell_select" hidden="{{loanIndex != 0 || activeIndex == 2}}">
-                <view class="weui-cell__hd weui-cell__hd_in-select-after">
-                  <view class="weui-label">贷款比例：</view>
-                </view>
-                <view class="weui-cell__bd">
-                  <picker bindchange="percentChange" value="{{percentIndex}}" range="{{percentArr}}">
-                    <view class="weui-select weui-select_in-select-after weui-cell__ft">{{percentArr[percentIndex]}}成</view>
-                  </picker>
-                </view>
+              <view class="weui-cell weui-cell_input" hidden="{{loanIndex != 0 || activeIndex == 2}}">
+                  
+                  <view class="weui-cell__hd">
+                    <view class="weui-label">贷款比例：</view>
+                  </view>
+                  <view class="weui-cell__bd weui-cell__ft">
+                    <input class="weui-input" style="text-align: right; color:#999" type="digit" placeholder="请输入贷款比例" name="d" value="{{percent}}" bindinput="percentChange"></input>
+                  </view>
+                  <view class="weui-cell__ft">成</view>
+                   
               </view>
+               
 
               <view class="weui-cell weui-cell_input" hidden="{{activeIndex == 1}}">
                 <view class="weui-cell__hd">
